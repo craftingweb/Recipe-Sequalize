@@ -11,6 +11,9 @@ app.post("/recipes", async (req, res) => {
 
     res.status(201).json(newRecipe);
   } catch (err) {
+    if (err.name === "SequelizeValidationError") {
+      return res.status(422).json({ errors: err.errors.map((e) => e.message) });
+    }
     console.error(err);
     res.status(500).send({ message: err.message });
   }
@@ -23,6 +26,9 @@ app.get("/recipes", async (req, res) => {
 
     res.status(200).json(allRecipes);
   } catch (err) {
+    if (err.name === "SequelizeValidationError") {
+      return res.status(422).json({ errors: err.errors.map((e) => e.message) });
+    }
     console.error(err);
     res.status(500).send({ message: err.message });
   }
@@ -41,6 +47,9 @@ app.get("/recipes/:id", async (req, res) => {
       res.status(404).send({ message: "Recipe not found" });
     }
   } catch (err) {
+    if (err.name === "SequelizeValidationError") {
+      return res.status(422).json({ errors: err.errors.map((e) => e.message) });
+    }
     console.error(err);
     res.status(500).send({ message: err.message });
   }
@@ -62,6 +71,9 @@ app.patch("/recipes/:id", async (req, res) => {
       res.status(404).send({ message: "Recipe not found" });
     }
   } catch (err) {
+    if (err.name === "SequelizeValidationError") {
+      return res.status(422).json({ errors: err.errors.map((e) => e.message) });
+    }
     res.status(500).send({ message: err.message });
     console.error(err);
   }
@@ -80,6 +92,9 @@ app.delete("/recipes/:id", async (req, res) => {
       res.status(404).send({ message: "Recipe not found" });
     }
   } catch (err) {
+    if (err.name === "SequelizeValidationError") {
+      return res.status(422).json({ errors: err.errors.map((e) => e.message) });
+    }
     console.error(err);
     res.status(500).send({ message: err.message });
   }

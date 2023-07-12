@@ -15,8 +15,8 @@ module.exports = {
             "1/2 pound dry lasagna noodles (requires 9 lasagna noodles - unbroken) ; 15 ounces ricotta cheese ; 1 1/2 pounds (24 ounces) mozzarella cheese",
           instructions:
             "1. Make the meat sauce.2. Cook the noodles. 3. Make the ricotta mixture. 4. Layer the lasagna according to the recipe instructions. 5. Cover with foil and bake. 6. Let the lasagna rest before serving.",
-          // created_at: new Date(),
-          // updated_at: new Date(),
+          created_at: new Date(),
+          updated_at: new Date(),
         },
 
         /**
