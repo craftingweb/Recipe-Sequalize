@@ -1,0 +1,45 @@
+"use strict";
+
+/** @type {import('sequelize-cli').Migration} */
+module.exports = {
+  async up(queryInterface, Sequelize) {
+    await queryInterface.bulkInsert(
+      "recipe_apps",
+      [
+        {
+          // id: 1,
+          title: "Lasagna",
+          description:
+            "Italian dish made of stacked layers of lasagna alternating with fillings such as ragù, béchamel sauce, vegetables, cheeses, and seasonings and spices.",
+          ingredients:
+            "1/2 pound dry lasagna noodles (requires 9 lasagna noodles - unbroken) ; 15 ounces ricotta cheese ; 1 1/2 pounds (24 ounces) mozzarella cheese",
+          instructions:
+            "1. Make the meat sauce.2. Cook the noodles. 3. Make the ricotta mixture. 4. Layer the lasagna according to the recipe instructions. 5. Cover with foil and bake. 6. Let the lasagna rest before serving.",
+          // created_at: new Date(),
+          // updated_at: new Date(),
+        },
+
+        /**
+         * Add seed commands here.
+         *
+         * Example:
+         * await queryInterface.bulkInsert('People', [{
+         *   name: 'John Doe',
+         *   isBetaMember: false
+         * }], {});
+         */
+      ],
+      {}
+    );
+  },
+
+  down: async (queryInterface, Sequelize) => {
+    await queryInterface.bulkDelete("recipe_apps", null, {});
+    /**
+     * Add commands to revert seed here.
+     *
+     * Example:
+     * await queryInterface.bulkDelete('People', null, {});
+     */
+  },
+};
