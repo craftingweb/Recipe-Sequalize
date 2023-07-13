@@ -94,4 +94,8 @@ Contributing
 Contributions are welcome! If you find any issues or want to enhance the application, please submit a pull request.
 
 
+<img alt="GitHub forks" src="https://img.shields.io/github/forks/VitaliPri/Recipe-Sequalize">
+<img alt="GitHub followers" src="https://img.shields.io/github/followers/VitaliPri">
+<img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/VitaliPri/Recipe-Sequalize">
+<img alt="GitHub watchers" src="https://img.shields.io/github/watchers/VitaliPri/Recipe-Sequalize">
 
